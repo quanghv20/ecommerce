@@ -2,10 +2,11 @@ html.dark {
   --bg-body-color: #292e39;
   --primary-bg-color: #171c28;
   --text-color: #fff;
+  --text-hover-color: #0071dc;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
     saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
 
-  --header-bg-color: #171c28;
+  --header-bg-color: var(--primary-bg-color);
   --header-actions-group-bg-color: #292e39;
   --header-actions-group-shadow: rgba(0, 0, 0, 0.2);
   --header-actions-group-separate-bg-color: #545458;
@@ -13,8 +14,9 @@ html.dark {
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(16%) saturate(704%) hue-rotate(185deg) brightness(91%) contrast(91%);
+  --dropdown-border-sider-color: var(--primary-bg-color);
 
   /** Home Page*/
-  --bg-ctg-item: #171c28;
+  --bg-ctg-item: var(--primary-bg-color);
   --bg-ctg-item-thumb: #292e39;
 }

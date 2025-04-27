@@ -37,6 +37,12 @@
     background: var(--bg-ctg-item);
     border-radius: 16px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 
     &__thumb {
       width: 116px;

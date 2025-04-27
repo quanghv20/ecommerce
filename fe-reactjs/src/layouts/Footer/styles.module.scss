@@ -1,7 +1,75 @@
 .footer {
   margin-top: 40px;
-  padding: 100px;
-  height: 200px;
+  padding: 0px 50px 50px;
   background: var(--primary-bg-color);
-  text-align: center;
+
+  &__column {
+    margin-top: 50px !important;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    &_name {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+  }
+
+  &__form {
+    input {
+      height: 46px;
+      padding: 0 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      background-color: "#fff";
+      transition: border-color 0.25s;
+      color: #333;
+
+      &:focus {
+        outline: none;
+        border-color: #333;
+      }
+    }
+
+    button {
+      height: 46px;
+      padding: 0 20px;
+      font-size: 18px;
+      transition: background-color 0.25s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__item_title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  &__item_list {
+    margin-top: 20px;
+  }
+
+  &__item_text {
+    display: inline-block;
+    margin: 8px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+    cursor: pointer;
+    transition: color 0.25s;
+
+    &:hover {
+      color: var(--text-hover-color);
+    }
+  }
 }

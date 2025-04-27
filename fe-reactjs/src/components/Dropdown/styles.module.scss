@@ -1,7 +1,8 @@
 .dropdown {
   position: absolute;
   left: 0;
-  padding-top: 30px;
+  width: 100%;
+  padding-top: 16px;
   opacity: 0; /* Đặt opacity ban đầu là 0 */
   visibility: hidden; /* Đặt visibility là hidden khi không hiển thị */
   transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out; /* Thêm transition cho opacity và visibility */
@@ -18,6 +19,8 @@
 
   &__inner {
     position: relative;
+    height: 480px;
+    min-height: 480px;
     padding: 30px;
     border-radius: 20px;
     background: var(--dropdown-bg-color);
@@ -30,5 +33,25 @@
       left: var(--arrow-left);
       filter: var(--dropdown-arrow-color);
     }
+  }
+
+  &__wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  &__sidebar {
+    width: 292px;
+    border-right: 1px solid var(--dropdown-border-sider-color);
+    padding-right: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__content {
+    flex-grow: 1; /* Đảm bảo content chiếm phần còn lại */
+    padding-left: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }

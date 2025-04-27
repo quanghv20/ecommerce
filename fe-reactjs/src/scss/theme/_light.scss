@@ -2,6 +2,7 @@ html {
   --bg-body-color: #f6f6f6;
   --primary-bg-color: #eee;
   --text-color: #1a162e;
+  --text-hover-color: #0071dc;
   --icon-color: brightness(0) saturate(100%) invert(6%) sepia(26%)
     saturate(3064%) hue-rotate(225deg) brightness(98%) contrast(93%);
 
@@ -12,6 +13,7 @@ html {
 
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: #c8c8c866;
+  --dropdown-border-sider-color: #d2d1d6;
 
   /** Home Page*/
   --bg-ctg-item: #eee;
