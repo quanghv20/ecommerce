@@ -3,24 +3,31 @@
   left: 0;
   width: 100%;
   padding-top: 16px;
-  opacity: 0; /* Đặt opacity ban đầu là 0 */
-  visibility: hidden; /* Đặt visibility là hidden khi không hiển thị */
-  transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out; /* Thêm transition cho opacity và visibility */
+  opacity: 0;
+  /* Đặt opacity ban đầu là 0 */
+  visibility: hidden;
+  /* Đặt visibility là hidden khi không hiển thị */
+  transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
+  /* Thêm transition cho opacity và visibility */
 
   &.show {
-    opacity: 1; /* Khi có class 'show', opacity sẽ là 1 */
-    visibility: visible; /* Hiển thị dropdown */
+    opacity: 1;
+    /* Khi có class 'show', opacity sẽ là 1 */
+    visibility: visible;
+    /* Hiển thị dropdown */
   }
 
   &.hide {
-    opacity: 0; /* Khi có class 'hide', opacity sẽ giảm xuống 0 */
-    visibility: hidden; /* Ẩn dropdown */
+    opacity: 0;
+    /* Khi có class 'hide', opacity sẽ giảm xuống 0 */
+    visibility: hidden;
+    /* Ẩn dropdown */
   }
 
   &__inner {
     position: relative;
-    height: 480px;
-    min-height: 480px;
+    height: 550px;
+    min-height: 550px;
     padding: 30px;
     border-radius: 20px;
     background: var(--dropdown-bg-color);
@@ -41,11 +48,12 @@
   }
 
   &__sidebar {
-    width: 292px;
+    min-width: 330px;
     border-right: 1px solid var(--dropdown-border-sider-color);
     padding-right: 30px;
     overflow-x: hidden;
     overflow-y: auto;
+    overscroll-behavior: none;
   }
 
   &__content {
@@ -53,5 +61,6 @@
     padding-left: 30px;
     overflow-x: hidden;
     overflow-y: auto;
+    overscroll-behavior: none;
   }
 }

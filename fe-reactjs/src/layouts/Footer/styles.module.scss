@@ -72,4 +72,15 @@
       color: var(--text-hover-color);
     }
   }
+
+  &__social_icon {
+    display: inline-block;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
 }

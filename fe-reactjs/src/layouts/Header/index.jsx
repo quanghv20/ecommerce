@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ctgs } from "./constants";
+import { categories, services } from "./constants";
 import moreIcon from "assets/icons/more.svg";
 import logoIcon from "assets/icons/logo.svg";
 import arrowDownIcon from "assets/icons/arrow-down.svg";
@@ -10,7 +10,6 @@ import avatar from "assets/imgs/avatar.jpg";
 import DropdownComponent from "components/Dropdown";
 
 import styles from "./styles.module.scss";
-
 
 export default function Header() {
   /** Component States */
@@ -41,7 +40,7 @@ export default function Header() {
         {/* Navbar */}
         <nav className={styles.navbar}>
           <ul className={styles.navbar__list}>
-            {ctgs.map((ctg, index) => {
+            {services.map((ctg, index) => {
               return (
                 <li
                   className={styles.navbar__item}

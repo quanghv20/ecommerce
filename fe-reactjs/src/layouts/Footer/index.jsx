@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="mt-2">
               <p className={styles.footer__item_text}>Receive product news and updates.</p>
               <form className={styles.footer__form}>
-                <div class="d-flex align-items-center gap-3">
+                <div className="d-flex align-items-center gap-3">
                   <input
                     type="email"
                     placeholder="Email address"
@@ -68,17 +68,17 @@ export default function Footer() {
               <li><a className={styles.footer__item_text} href="#/">Address: Soc Son District, City. Hanoi</a></li>
               <li><a className={styles.footer__item_text} href="#/">Hours: M - F 08:00 am - 06:00 pm</a></li>
             </ul>
-            <div className="d-flex gap-5 mt-4">
-              <a href="#/">
+            <div className="d-flex align-items-center gap-5 mt-4">
+              <a href="#/" className={styles.footer__social_icon}>
                 <i className="bi bi-facebook" style={{ fontSize: "3rem" }}></i>
               </a>
-              <a href="#/">
+              <a href="#/" className={styles.footer__social_icon}>
                 <i className="bi bi-youtube" style={{ fontSize: "3rem" }}></i>
               </a>
-              <a href="#/">
+              <a href="#/" className={styles.footer__social_icon}>
                 <i className="bi bi-twitter" style={{ fontSize: "3rem" }}></i>
               </a>
-              <a href="#/">
+              <a href="#/" className={styles.footer__social_icon}>
                 <i className="bi bi-linkedin" style={{ fontSize: "3rem" }}></i>
               </a>
             </div>

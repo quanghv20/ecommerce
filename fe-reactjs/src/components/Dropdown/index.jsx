@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { categories as ctgsDataSource, subCategories as subCtgsDataSource } from "layouts/Header/constants.js";
 import DropdownCard from "../DropdownCard";
+import departmentIcon from "layouts/Header/icons/department.svg";
 
 import styles from "./styles.module.scss";
 
@@ -7,15 +9,24 @@ export default function DropdownComponent(props) {
   /** Props Data */
   const { children, isOpen } = props;
 
-  /** Declaration */
-  const icon = (<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="15" cy="15" r="15" fill="#FFB700" />
-    <circle cx="15" cy="15" r="15" fill="white" fill-opacity="0.5" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 18.5C15 15.8748 15.0281 15 18.5 15C21.9719 15 22 15.8748 22 18.5C22 21.1252 22.0111 22 18.5 22C14.9889 22 15 21.1252 15 18.5Z" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M26 18.5C26 15.8748 26.0281 15 29.5 15C32.9719 15 33 15.8748 33 18.5C33 21.1252 33.0111 22 29.5 22C25.9889 22 26 21.1252 26 18.5Z" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 29.5C15 26.8748 15.0281 26 18.5 26C21.9719 26 22 26.8748 22 29.5C22 32.1252 22.0111 33 18.5 33C14.9889 33 15 32.1252 15 29.5Z" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M26 29.5C26 26.8748 26.0281 26 29.5 26C32.9719 26 33 26.8748 33 29.5C33 32.1252 33.0111 33 29.5 33C25.9889 33 26 32.1252 26 29.5Z" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  </svg>)
+  /** Component States */
+  const [subCategories, setSubCategories] = useState(subCtgsDataSource)
+
+
+  /** Logic Handler */
+  const handleShuffledSubCategories = () => {
+    // Tạo bản sao của mảng subCategories để xử lý hóan đổi các phần tử trong mảng
+    const shuffledSubCategories = [...subCategories];
+
+    // Hàm Fisher-Yates shuffle
+    for (let i = shuffledSubCategories.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1)); // Lấy một chỉ số ngẫu nhiên từ 0 đến i
+      [shuffledSubCategories[i], shuffledSubCategories[j]] = [shuffledSubCategories[j], shuffledSubCategories[i]]; // Hoán đổi
+    }
+
+    // Cập nhật lại state với mảng đã xáo trộn
+    setSubCategories(shuffledSubCategories);
+  }
 
   return (
     <div id="dropdown" className={`${styles.dropdown} ${isOpen ? styles.show : 'hide'}`}>
@@ -23,23 +34,27 @@ export default function DropdownComponent(props) {
         <div className={styles.dropdown__wrapper}>
           <div className={styles.dropdown__sidebar}>
             <DropdownCard
-              icon={icon}
-              title="Fashion Deals"
-              items={["Clothing", "Shoes", "Accessories", "Bags", "Jewelry", "Smartphones", "Laptops", "Headphones", "Cameras", "Tablets", "Speakers"]}
+              icon={departmentIcon}
+              title="All Departments"
+              items={ctgsDataSource.map((ctg) => ctg)}
+              handleCategoryHover={handleShuffledSubCategories}
+              department
             />
           </div>
           <div className={styles.dropdown__content}>
             <div className="row">
               {
-                [1, 2, 3, 4, 5, 6].map((item) => (
-                  <div className="col-4 mb-5" key={item}>
-                    <DropdownCard
-                      icon={icon}
-                      title="Fashion Deals"
-                      items={["Clothing", "Shoes", "Accessories", "Bags", "Jewelry"]}
-                    />
-                  </div>
-                ))
+                subCategories.map((item, index) => {
+                  return (
+                    <div className="col-4 mb-5" key={index}>
+                      <DropdownCard
+                        icon={item?.icon}
+                        title={item?.name}
+                        items={[...item?.subCategoryOptions.map(({ name }) => name)]}
+                      />
+                    </div>
+                  )
+                })
               }
             </div>
           </div>
