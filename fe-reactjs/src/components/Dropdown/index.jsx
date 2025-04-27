@@ -1,8 +1,10 @@
 import React from "react";
 
-export default function Dropdown({ children }) {
+import styles from "./styles.module.scss";
+
+export default function DropdownComponent({ children, isOpen }) {
   return (
-    <div className={styles.dropdown}>
+    <div id="dropdown" className={`${styles.dropdown} ${isOpen ? styles.show : 'hide'}`}>
       <div className={styles.dropdown__inner}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
         perspiciatis quidem similique sint aperiam veniam quibusdam ipsum quod

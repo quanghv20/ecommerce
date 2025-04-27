@@ -1,0 +1,34 @@
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 30px;
+  opacity: 0; /* Đặt opacity ban đầu là 0 */
+  visibility: hidden; /* Đặt visibility là hidden khi không hiển thị */
+  transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out; /* Thêm transition cho opacity và visibility */
+
+  &.show {
+    opacity: 1; /* Khi có class 'show', opacity sẽ là 1 */
+    visibility: visible; /* Hiển thị dropdown */
+  }
+
+  &.hide {
+    opacity: 0; /* Khi có class 'hide', opacity sẽ giảm xuống 0 */
+    visibility: hidden; /* Ẩn dropdown */
+  }
+
+  &__inner {
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--dropdown-bg-color);
+    box-shadow: 0px 40px 90px 20px (--dropdown-shadow-color);
+
+    &::before {
+      content: url("assets/icons/dropdown-arrow.svg");
+      position: absolute;
+      top: -13px;
+      left: var(--arrow-left);
+      filter: var(--dropdown-arrow-color);
+    }
+  }
+}

@@ -13,6 +13,7 @@ export default defineConfig({
       layouts: path.resolve(__dirname, "src/layouts"),
       pages: path.resolve(__dirname, "src/pages"),
       scss: path.resolve(__dirname, "src/scss"),
+      components: path.resolve(__dirname, "src/components"),
     },
   },
 });
