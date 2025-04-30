@@ -1,0 +1,49 @@
+.app-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 6px;
+  background: #f8f8fb;
+  font-size: 1.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.3s;
+}
+.app-btn-small {
+  height: 40px;
+}
+.app-btn + .app-btn:not(.app-btn-no-margin) {
+  margin-left: 20px;
+}
+.app-btn-text {
+  background: transparent;
+  font-weight: 400;
+}
+.app-btn-primary {
+  color: #171c28;
+  background: #ffb700;
+}
+.app-btn-outline {
+  background: transparent;
+  border: 1px solid #d2d1d6;
+}
+.app-btn-rounded {
+  border-radius: 99px;
+}
+.app-btn-danger {
+  color: #fff;
+  background: #ed4337;
+}
+.app-btn[disabled],
+.app-btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.app-btn:hover {
+  opacity: 0.9;
+}

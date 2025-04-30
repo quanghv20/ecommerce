@@ -1,12 +1,12 @@
-import { HomePage } from "pages";
-import AppLayout from "./layouts";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./router";
 
 function App() {
   return (
     <>
-      <AppLayout>
-        <HomePage />
-      </AppLayout>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
   );
 }

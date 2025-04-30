@@ -9,19 +9,6 @@
     margin-top: 50px !important;
   }
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-
-    &_name {
-      font-size: 20px;
-      font-weight: bold;
-      color: var(--text-color);
-    }
-  }
-
   &__form {
     margin-top: 16px;
 

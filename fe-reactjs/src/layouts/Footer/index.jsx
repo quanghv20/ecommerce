@@ -1,6 +1,10 @@
+/** React */
 import React from "react";
-import logoIcon from "assets/icons/logo.svg";
 
+/** Components */
+import Logo from "components/Logo";
+
+/** Styles */
 import styles from "./styles.module.scss";
 
 export default function Footer() {
@@ -9,10 +13,7 @@ export default function Footer() {
       <div className="container">
         <div className="row gy-4">
           <div className={`col-xl-4 ${styles.footer__column}`}>
-            <div className={styles.footer__logo}>
-              <img src={logoIcon} alt="Logo" className="me-2" />
-              <h6 className={styles.footer__logo_name}>Grocerymart</h6>
-            </div>
+            <Logo />
             <p
               className={styles.footer__item_text}
               style={{ marginTop: "24px", paddingRight: "30px" }}

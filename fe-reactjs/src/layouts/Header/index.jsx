@@ -1,28 +1,24 @@
+/** React */
 import React, { useState } from "react";
-import { services } from "./constants";
-import moreIcon from "assets/icons/more.svg";
-import logoIcon from "assets/icons/logo.svg";
-import arrowDownIcon from "assets/icons/arrow-down.svg";
-import searchIcon from "assets/icons/search.svg";
-import heartIcon from "assets/icons/heart.svg";
-import buyIcon from "assets/icons/buy.svg";
-import avatar from "assets/imgs/avatar.jpg";
-import Dropdown from "components/Dropdown";
+import { Link } from "react-router-dom";
 
+/** Components */
+import Dropdown from "components/Dropdown";
+import Logo from "components/Logo";
+
+/** Assets */
+import moreIcon from "assets/icons/more.svg";
+import arrowDownIcon from "assets/icons/arrow-down.svg";
+
+/** Contants */
+import { services } from "./constants";
+
+/** Styles */
 import styles from "./styles.module.scss";
 
 export default function Header() {
   /** Component States */
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
-
-  /** Logic handler */
-  const changeTheme = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-  };
 
   return (
     <div className={styles.header}>
@@ -31,11 +27,7 @@ export default function Header() {
         <div className={`${styles.more_icon} icon`}>
           <img src={moreIcon} alt="" />
         </div>
-        {/* Logo */}
-        <div className={styles.logo} onClick={changeTheme}>
-          <img src={logoIcon} alt="" className={styles.logo__img} />
-          <h1 className={styles.logo__title}>App Logo</h1>
-        </div>
+        <Logo />
 
         {/* Navbar */}
         <nav className={styles.navbar}>
@@ -77,7 +69,7 @@ export default function Header() {
         </nav>
 
         {/* Actions */}
-        <div className={styles.actions}>
+        {/* <div className={styles.actions}>
           <div className={styles.actions__group}>
             <button className={styles.actions__btn}>
               <img
@@ -111,6 +103,20 @@ export default function Header() {
           <div className={styles.actions__user}>
             <img src={avatar} alt="" className={styles.actions__avatar} />
           </div>
+        </div> */}
+
+        {/* Auth */}
+        <div className={styles.actions__auth}>
+          <Link to="/sign-in">
+            <button className={`${styles.btn_signin} app-btn app-btn-text`}>
+              Sign in
+            </button>
+          </Link>
+          <Link to="/sign-up">
+            <button className={`${styles.btn_signup} app-btn app-btn-primary`}>
+              Sign up
+            </button>
+          </Link>
         </div>
       </div>
     </div>

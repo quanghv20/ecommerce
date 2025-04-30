@@ -1,0 +1,35 @@
+.auth {
+  display: flex;
+  height: 100vh;
+
+  &__intro,
+  &__content {
+    flex: 1;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    &_text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      max-width: 412px;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    background: var(--auth-content-bg-color);
+
+    &_inner {
+      width: min(460px, 100%);
+      background: orange;
+      margin: 0 auto;
+    }
+  }
+}
