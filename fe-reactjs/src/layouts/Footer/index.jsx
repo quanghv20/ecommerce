@@ -13,31 +13,52 @@ export default function Footer() {
               <img src={logoIcon} alt="Logo" className="me-2" />
               <h6 className={styles.footer__logo_name}>Grocerymart</h6>
             </div>
-            <p className={styles.footer__item_text} style={{ margin: "24px 0px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, maxime et veniam eligendi rem voluptatibus.</p>
-            <div className="mt-2">
-              <p className={styles.footer__item_text}>Receive product news and updates.</p>
-              <form className={styles.footer__form}>
-                <div className="d-flex align-items-center gap-3">
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                  />
-                  <button className="btn btn-warning" >
-                    SEND
-                  </button>
-                </div>
-              </form>
+            <p
+              className={styles.footer__item_text}
+              style={{ marginTop: "24px", paddingRight: "30px" }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              maxime et veniam eligendi rem voluptatibus.
+            </p>
+            <div className={`mt-xl-4 m-lg-0 ${styles.footer__form}`}>
+              <p className={styles.footer__item_text}>
+                Receive product news and updates.
+              </p>
+              <div className="d-flex align-items-center gap-3">
+                <input type="email" placeholder="Email address" />
+                <button className="btn btn-warning">SEND</button>
+              </div>
             </div>
           </div>
 
-          <div className={`col-xl-3 ${styles.footer__column}`}>
+          <div className={`col-xl-3 col-lg-4 ${styles.footer__column}`}>
             <h6 className={styles.footer__item_title}>SHOP</h6>
             <ul className={styles.footer__item_list}>
-              <li><a href="#/" className={styles.footer__item_text}>All Departments</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Fashion Deals</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Electronics Discounts</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Home & Living Specials</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Beauty Bargains</a></li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  All Departments
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Fashion Deals
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Electronics Discounts
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Home & Living Specials
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Beauty Bargains
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -49,24 +70,60 @@ export default function Footer() {
             </ul>
           </div> */}
 
-          <div className={`col-xl-2 ${styles.footer__column}`}>
+          <div className={`col-xl-2 col-lg-4 ${styles.footer__column}`}>
             <h6 className={styles.footer__item_title}>COMPANY</h6>
             <ul className={styles.footer__item_list}>
-              <li><a href="#/" className={styles.footer__item_text}>Customer Service</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Terms of Use</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Privacy</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>Careers</a></li>
-              <li><a href="#/" className={styles.footer__item_text}>About</a></li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Customer Service
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Terms of Use
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Privacy
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#/" className={styles.footer__item_text}>
+                  About
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div className={`col-xl-3 ${styles.footer__column}`}>
+          <div className={`col-xl-3 col-lg-4 ${styles.footer__column}`}>
             <h6 className={styles.footer__item_title}>CONTACT</h6>
             <ul className={styles.footer__item_list}>
-              <li><a className={styles.footer__item_text} href="#/">Email: contact@grocerymart.com</a></li>
-              <li><a className={styles.footer__item_text} href="#/">Hotline: 1800.88.88</a></li>
-              <li><a className={styles.footer__item_text} href="#/">Address: Soc Son District, City. Hanoi</a></li>
-              <li><a className={styles.footer__item_text} href="#/">Hours: M - F 08:00 am - 06:00 pm</a></li>
+              <li>
+                <a className={styles.footer__item_text} href="#/">
+                  Email: contact@grocerymart.com
+                </a>
+              </li>
+              <li>
+                <a className={styles.footer__item_text} href="#/">
+                  Hotline: 1800.88.88
+                </a>
+              </li>
+              <li>
+                <a className={styles.footer__item_text} href="#/">
+                  Address: Soc Son District, City. Hanoi
+                </a>
+              </li>
+              <li>
+                <a className={styles.footer__item_text} href="#/">
+                  Hours: M - F 08:00 am - 06:00 pm
+                </a>
+              </li>
             </ul>
             <div className="d-flex align-items-center gap-5 mt-4">
               <a href="#/" className={styles.footer__social_icon}>
@@ -86,7 +143,9 @@ export default function Footer() {
         </div>
 
         <div className="text-center mt-4 pt-4 border-top">
-          <small className="text-secondary">&copy; 2010 - 2025 Grocery Mart. All rights reserved.</small>
+          <small className="text-secondary">
+            &copy; 2010 - 2025 Grocery Mart. All rights reserved.
+          </small>
         </div>
       </div>
     </div>

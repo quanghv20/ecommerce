@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { categories, services } from "./constants";
+import { services } from "./constants";
 import moreIcon from "assets/icons/more.svg";
 import logoIcon from "assets/icons/logo.svg";
 import arrowDownIcon from "assets/icons/arrow-down.svg";
@@ -7,7 +7,7 @@ import searchIcon from "assets/icons/search.svg";
 import heartIcon from "assets/icons/heart.svg";
 import buyIcon from "assets/icons/buy.svg";
 import avatar from "assets/imgs/avatar.jpg";
-import DropdownComponent from "components/Dropdown";
+import Dropdown from "components/Dropdown";
 
 import styles from "./styles.module.scss";
 
@@ -46,13 +46,17 @@ export default function Header() {
                   className={styles.navbar__item}
                   key={index}
                   onMouseEnter={(e) => {
-                    const dropdown = document.getElementById('dropdown');
+                    const dropdown = document.getElementById("dropdown");
                     const dropdownRect = dropdown.getBoundingClientRect();
 
                     const itemRect = e.currentTarget.getBoundingClientRect();
-                    const left = itemRect.left - dropdownRect.left + itemRect.width / 2;
+                    const left =
+                      itemRect.left - dropdownRect.left + itemRect.width / 2;
 
-                    e.currentTarget.style.setProperty('--arrow-left', `${left}px`);
+                    e.currentTarget.style.setProperty(
+                      "--arrow-left",
+                      `${left}px`
+                    );
                     setOpenDropdownIndex(index); // set đúng index
                   }}
                   onMouseLeave={() => setOpenDropdownIndex(null)} // <<< clear khi hover ra
@@ -65,9 +69,9 @@ export default function Header() {
                       className={`${styles.navbar__arrow_icon} icon`}
                     />
                   </a>
-                  <DropdownComponent isOpen={openDropdownIndex === index} />
+                  <Dropdown isOpen={openDropdownIndex === index} />
                 </li>
-              )
+              );
             })}
           </ul>
         </nav>
