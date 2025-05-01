@@ -62,7 +62,7 @@ export default function Header() {
                     <img
                       src={arrowDownIcon}
                       alt=""
-                      className={`${styles.navbar__arrow_icon} icon`}
+                      className={`${styles.arrow_icon} icon`}
                     />
                   </a>
                   <Dropdown isOpen={openDropdownIndex === index} />
