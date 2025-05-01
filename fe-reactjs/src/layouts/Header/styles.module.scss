@@ -59,6 +59,23 @@
     gap: 30px;
   }
 
+  &__item {
+    transition: color 0.3s;
+
+    .arrow_icon {
+      transition: fill 0.3s;
+    }
+
+    &:hover {
+      color: var(--text-hover-color);
+
+      .arrow_icon {
+        filter: brightness(0) saturate(100%) invert(51%) sepia(45%)
+          saturate(4089%) hue-rotate(153deg) brightness(104%) contrast(104%);
+      }
+    }
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -67,11 +84,6 @@
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 146.667%;
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--text-hover-color);
-    }
   }
 
   /** Responsive */

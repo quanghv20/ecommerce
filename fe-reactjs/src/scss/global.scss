@@ -17,7 +17,7 @@
   height: 40px;
 }
 .app-btn + .app-btn:not(.app-btn-no-margin) {
-  margin-left: 20px;
+  // margin-left: 20px;
 }
 .app-btn-text {
   background: transparent;
@@ -30,6 +30,10 @@
 .app-btn-outline {
   background: transparent;
   border: 1px solid #d2d1d6;
+  transition: border-color 0.3s;
+}
+.app-btn-outline:hover {
+  border-color: var(--text-hover-color);
 }
 .app-btn-rounded {
   border-radius: 99px;
