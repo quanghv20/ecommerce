@@ -25,10 +25,10 @@ export default function Footer() {
               <p className={styles.footer__item_text}>
                 Receive product news and updates.
               </p>
-              <div className="d-flex align-items-center gap-3">
+              <form className="d-flex align-items-center gap-3">
                 <input type="email" placeholder="Email address" />
                 <button className="btn btn-warning">SEND</button>
-              </div>
+              </form>
             </div>
           </div>
 
