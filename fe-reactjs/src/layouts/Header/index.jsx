@@ -9,6 +9,10 @@ import Logo from "components/Logo";
 /** Assets */
 import moreIcon from "assets/icons/more.svg";
 import arrowDownIcon from "assets/icons/arrow-down.svg";
+import searchIcon from "assets/icons/search.svg";
+import heartIcon from "assets/icons/heart.svg";
+import buyIcon from "assets/icons/buy.svg";
+import avatar from "assets/imgs/avatar/avatar-1.png";
 
 /** Contants */
 import { services } from "./constants";
@@ -69,7 +73,7 @@ export default function Header() {
         </nav>
 
         {/* Actions */}
-        {/* <div className={styles.actions}>
+        <div className={styles.actions}>
           <div className={styles.actions__group}>
             <button className={styles.actions__btn}>
               <img
@@ -103,10 +107,10 @@ export default function Header() {
           <div className={styles.actions__user}>
             <img src={avatar} alt="" className={styles.actions__avatar} />
           </div>
-        </div> */}
+        </div>
 
         {/* Auth */}
-        <div className={styles.actions__auth}>
+        {/* <div className={styles.actions__auth}>
           <Link to="/sign-in">
             <button className={`${styles.btn_signin} app-btn app-btn-text`}>
               Sign in
@@ -117,7 +121,7 @@ export default function Header() {
               Sign up
             </button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
