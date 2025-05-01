@@ -1,42 +1,16 @@
 @use "scss/abstracts" as *;
 
-.header {
-  background: var(--primary-bg-color);
-  padding: 30px 16px;
-
-  /** Responsive */
-  @include screen(tablet) {
-    padding: 20px 16px;
-  }
-}
-
-.header__content {
-  @include flexItemsCenter;
-  position: relative;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1308px;
-}
-
-.more_icon {
-  display: none;
-  cursor: pointer;
-
-  /** Responsive */
-  @include screen(tablet) {
-    display: block;
-  }
-}
-
 .logo {
   @include flexItemsCenter;
   gap: 14px;
   cursor: pointer;
 
   &__title {
+    margin-top: 2.5px;
     font-weight: 700;
     font-size: 2.2rem;
     line-height: 145.455%;
+    text-transform: uppercase;
   }
 
   /** Responsive */
@@ -50,104 +24,5 @@
       font-size: 2rem;
       line-height: 145.455%;
     }
-  }
-}
-
-.navbar {
-  &__list {
-    display: flex;
-    gap: 30px;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    height: 50px;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 146.667%;
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--text-hover-color);
-    }
-  }
-
-  /** Responsive */
-  @include screen(tablet) {
-    display: none;
-  }
-}
-
-.actions__auth {
-  @include flexItemsCenter;
-  gap: 10px;
-
-  .btn_signin:hover {
-    color: var(--text-hover-color);
-  }
-}
-
-.actions {
-  @include flexItemsCenter;
-  gap: 20px;
-
-  &__group {
-    display: flex;
-    align-items: center;
-    background: var(--header-actions-group-bg-color);
-    min-width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    box-shadow: 0px 20px 60px 10px var(--header-actions-group-shadow);
-  }
-
-  &__group:nth-child(2) {
-    padding: 0 12px;
-  }
-
-  &__btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    cursor: pointer;
-  }
-
-  &__title {
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 22px;
-  }
-
-  &__separate {
-    width: 1px;
-    height: 24px;
-    background: var(--header-actions-group-separate-bg-color);
-  }
-
-  &__user &__avatar {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-  }
-
-  /** Responsive */
-  @include screen(tablet) {
-    &__group {
-      min-width: 40px;
-      height: 40px;
-    }
-
-    &__user &__avatar {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  @include screen(mobile) {
-    display: none;
   }
 }
