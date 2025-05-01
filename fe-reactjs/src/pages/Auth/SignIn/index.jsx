@@ -19,6 +19,8 @@ export default function SignInPage() {
         <p className={styles.auth__intro_text}>
           The best of luxury brand values, high quality products, and innovative
           services
+
+          Test CI CD with Netlif
         </p>
       </div>
 
