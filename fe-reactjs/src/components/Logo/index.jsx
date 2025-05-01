@@ -22,7 +22,7 @@ export default function Logo() {
       {/* Logo */}
       <div className={styles.logo} onClick={changeTheme}>
         <img src={logoIcon} alt="" className={styles.logo__img} />
-        <h1 className={styles.logo__title}>Grocerymart</h1>
+        <h1 className={styles.logo__title}>Grocerymarts</h1>
       </div>
     </>
   );

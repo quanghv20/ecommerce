@@ -107,7 +107,7 @@ export default function Footer() {
             <ul className={styles.footer__item_list}>
               <li>
                 <a className={styles.footer__item_text} href="#/">
-                  Email: contact@grocerymart.com
+                  Email: contact@grocerymarts.com
                 </a>
               </li>
               <li>
@@ -145,7 +145,7 @@ export default function Footer() {
 
         <div className="text-center mt-4 pt-4 border-top">
           <small className="text-secondary">
-            &copy; 2010 - 2025 Grocery Mart. All rights reserved.
+            &copy; 2010 - 2025 Grocery Marts. All rights reserved.
           </small>
         </div>
       </div>
