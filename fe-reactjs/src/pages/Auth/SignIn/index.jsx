@@ -61,7 +61,7 @@ export default function SignInPage() {
               </label>
               <span className={styles.hover_underline}>
                 <Link
-                  to="sign-up"
+                  to="/sign-up"
                   style={{
                     color: "#00bcd4",
                     cursor: "pointer",
@@ -85,7 +85,7 @@ export default function SignInPage() {
               <span style={{ marginRight: 8 }}>Don't have an account yet?</span>
               <span className={styles.hover_underline}>
                 <Link
-                  to="sign-up"
+                  to="/sign-up"
                   style={{
                     color: "#00bcd4",
                     cursor: "pointer",
