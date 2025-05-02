@@ -1,0 +1,7 @@
+1. Responsive Button Sign in & Sign on header
+2. Responsive Sign-in & Sign-up page
+3. Dark theme Sign-in & Sign-up page (color-text input)
+4. Menu navbar (Responsive - mobile)
+5. Forgot password page
+6. Create new password page
+7. Drowndrop for each service

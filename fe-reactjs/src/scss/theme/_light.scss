@@ -3,8 +3,11 @@ html {
   --primary-bg-color: #eee;
   --text-color: #1a162e;
   --text-hover-color: #00bcd4;
+  --text-active-color: #00bcd4;
   --icon-color: brightness(0) saturate(100%) invert(6%) sepia(26%)
     saturate(3064%) hue-rotate(225deg) brightness(98%) contrast(93%);
+  --icon-active-color: brightness(0) saturate(100%) invert(51%) sepia(45%)
+    saturate(4089%) hue-rotate(153deg) brightness(104%) contrast(104%);
 
   --header-bg-color: #eee;
   --header-actions-group-bg-color: #fff;
@@ -21,4 +24,10 @@ html {
 
   /** Auth Pages */
   --auth-content-bg-color: #fff;
+
+  /** Product Detail Page */
+  --breadcrumbs-bg-color: #fff;
+  --breadcrumbs-text-color: #9e9da8;
+  --product-info-bg-color: #fff;
+  --product-preview-border-color: #00bcd4;
 }

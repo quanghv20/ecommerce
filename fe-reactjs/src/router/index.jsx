@@ -8,7 +8,7 @@ import MainLayout from "layouts/MainLayout";
 import PrivateRoute from "./PrivateRoute";
 
 /** Public Pages */
-import { HomePage, AboutPage } from "pages/Publics";
+import { HomePage, AboutPage, ProductDetailPage } from "pages/Publics";
 import { NotFoundPage, UnauthorizedPage, ForbiddenPage } from "pages/Errors";
 import { SignInPage, SignUpPage, ForgotPasswordPage } from "pages/Auth";
 
@@ -30,6 +30,7 @@ const Router = () => {
         {/* Public pages with layout */}
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/product-detail" element={<ProductDetailPage />} />
 
         {/* Private pages */}
         <Route element={<PrivateRoute />}>
