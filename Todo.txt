@@ -5,3 +5,5 @@
 5. Forgot password page
 6. Create new password page
 7. Drowndrop for each service
+8. Product Detail - UI/Component fillter on Product info
+9. Product Detail - UI/Responsvie
