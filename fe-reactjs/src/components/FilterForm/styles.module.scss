@@ -1,0 +1,46 @@
+.form_filter {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 1060px;
+  height: 362px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 20px;
+  background: var(--filter-form-bg-color);
+  z-index: 9999;
+  opacity: 0; /* Đặt opacity ban đầu là 0 */
+  visibility: hidden; /* Đặt visibility là hidden khi không hiển thị */
+  transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out; /* Thêm transition cho opacity và visibility */
+  z-index: 9999;
+
+  &.show {
+    opacity: 1;
+    /* Khi có class 'show', opacity sẽ là 1 */
+    visibility: visible;
+    /* Hiển thị dropdown */
+  }
+
+  &.hide {
+    opacity: 0;
+    /* Khi có class 'hide', opacity sẽ giảm xuống 0 */
+    visibility: hidden;
+    /* Ẩn dropdown */
+  }
+
+  &::before {
+    content: url("assets/icons/dropdown-arrow.svg");
+    position: absolute;
+    top: -13px;
+    // left: var(--arrow-left);
+    right: 40px;
+    filter: var(--dropdown-arrow-color);
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0%;
+  }
+}
