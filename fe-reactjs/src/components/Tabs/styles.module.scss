@@ -1,0 +1,83 @@
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.tabHeaders {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 8px;
+}
+
+.tabHeaders::-webkit-scrollbar {
+  display: none;
+}
+
+.tabButton {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 10px 0px;
+  margin-right: 36px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 450;
+  transition: color 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 1.5px;
+    width: 0%;
+    background: var(--text-active-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &.active {
+    color: #000;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
+  color: var(--text-active-color) !important;
+}
+
+.tabContent {
+  margin-top: 24px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .tabHeaders {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tabButton {
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+}
