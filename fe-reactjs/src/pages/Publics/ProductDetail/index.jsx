@@ -24,7 +24,7 @@ export default function ProductDetailPage() {
       <Breadcrumbs />
 
       <div className={`row gx-5 ${styles.product__detail}`}>
-        <div className={`${styles.product__detail_col} col-5`}>
+        <div className={`${styles.product__detail_col} col-xl-5`}>
           <div className={styles.product__detail_img}>
             <img src={product1} alt="" />
           </div>
@@ -45,13 +45,13 @@ export default function ProductDetailPage() {
             </div>
           </div>
         </div>
-        <div className={`${styles.product__detail_col} col-7`}>
+        <div className={`${styles.product__detail_col} col-xl-7`}>
           <div className={styles.product__detail_info}>
             <h2 className={styles.product__detail_info_heading}>
               Coffee Beans - Espresso Arabica and Robusta Beans
             </h2>
-            <div className="row">
-              <div className="col-6">
+            <div className="row gx-5">
+              <div className="col-md-6">
                 <div className={styles.prod_prop}>
                   <img
                     className={styles.prod_prop__icon}
@@ -60,8 +60,28 @@ export default function ProductDetailPage() {
                   />
                   <h4 className={styles.prod_prop__title}>(3.5) 110 reviews</h4>
                 </div>
+                <div className="mt-5">
+                  <label className={styles.prod_prop__title}>Size/Weight</label>
+                  <div className={styles.dropdown_row}>
+                    <select id="weight">
+                      <option>500g</option>
+                      <option>250g</option>
+                      <option>1kg</option>
+                    </select>
+                    <div className={styles.separator}></div>
+                    <select id="unit">
+                      <option>Gram</option>
+                      <option>Kg</option>
+                    </select>
+                  </div>
+                  <div className={styles.tags}>
+                    <button className={styles.tag}>Small</button>
+                    <button className={styles.tag}>Medium</button>
+                    <button className={styles.tag}>Large</button>
+                  </div>
+                </div>
               </div>
-              <div className="col-6">
+              <div className="col-md-6">
                 <div className={styles.prod_prop}>
                   <img
                     className={styles.prod_prop__icon}
