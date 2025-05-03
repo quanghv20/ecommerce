@@ -8,3 +8,4 @@ export { default as InputField } from "./InputField";
 export { default as Logo } from "./Logo";
 export { default as ScrollToTop } from "./ScrollToTop";
 export { default as Slideshow } from "./Slideshow";
+export { default as Tabs } from "./Tabs";
