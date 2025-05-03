@@ -7,16 +7,14 @@ const Card = ({ image, title, price, rating }) => {
   return (
     <article className={styles.card}>
       <div className={styles.card__img__wrapper}>
-        <a href="#!">
-          <img src={image} alt={title} className={styles.card__img} />
-        </a>
+        <img src={image} alt={title} className={styles.card__img} />
         <button className={styles.favorite_btn}>
           <img src={favoriteIcon} alt="favorite" style={{ marginTop: 7 }} />
         </button>
       </div>
       <div className={styles.card__body}>
         <h3 className={styles.card__body__title}>
-          <a href="#!">{title}</a>
+          <span>{title}</span>
         </h3>
 
         <div className={styles.card__body__info}>

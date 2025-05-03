@@ -1,10 +1,9 @@
 /** React */
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 /** Components */
-import Dropdown from "components/Dropdown";
-import Logo from "components/Logo";
+import { Dropdown, Logo } from "components";
 
 /** Assets */
 import moreIcon from "assets/icons/more.svg";
@@ -57,14 +56,14 @@ export default function Header() {
                   }}
                   onMouseLeave={() => setOpenDropdownIndex(null)} // <<< clear khi hover ra
                 >
-                  <a href="#!" className={styles.navbar__link}>
+                  <Link href="#!" className={styles.navbar__link}>
                     {ctg?.name}
                     <img
                       src={arrowDownIcon}
                       alt=""
                       className={`${styles.arrow_icon} icon`}
                     />
-                  </a>
+                  </Link>
                   <Dropdown isOpen={openDropdownIndex === index} />
                 </li>
               );
