@@ -21,7 +21,7 @@ export default function HomePage() {
 
   /** Logic Handlers */
   const handleToggleFilterForm = () => {
-    setIsOpenFilterForm((prev) => !prev);
+    setIsOpenFilterForm(!isOpenFilterForm);
   };
 
   /** Side Effects */
@@ -67,7 +67,11 @@ export default function HomePage() {
           >
             Filter <img src={filterIcon} alt="" />
           </button>
-          <FilterForm isOpen={isOpenFilterForm} ref={filterFormRef} />
+          <FilterForm
+            isOpen={isOpenFilterForm}
+            ref={filterFormRef}
+            onCancel={handleToggleFilterForm}
+          />
         </div>
         <div className="row g-5">
           {products.map((item, index) => (
