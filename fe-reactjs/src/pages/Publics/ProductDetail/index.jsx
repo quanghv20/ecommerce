@@ -5,14 +5,15 @@ import React from "react";
 import { Breadcrumbs, Tabs } from "components";
 
 import ProductInfo from "./ProductInfo";
+import Similar from "./Similar";
 import Review from "./Review";
 
 export default function ProductDetailPage() {
   const tabData = [
     { label: "Description", content: <Review /> },
-    { label: "Features", content: <Review /> },
+    { label: "Features", content: <Similar /> },
     { label: "Review (1100)", content: <Review /> },
-    { label: "Similar", content: <Review /> },
+    { label: "Similar", content: <Similar /> },
   ];
 
   return (

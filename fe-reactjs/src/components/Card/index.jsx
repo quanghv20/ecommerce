@@ -3,9 +3,9 @@ import favoriteIcon from "assets/icons/heart-red.svg";
 
 import styles from "./styles.module.scss";
 
-const Card = ({ image, title, price, rating }) => {
+const Card = ({ image, title, price, rating, small }) => {
   return (
-    <article className={styles.card}>
+    <article className={`${styles.card} ${small ? styles.small : ""}`}>
       <div className={styles.card__img__wrapper}>
         <img src={image} alt={title} className={styles.card__img} />
         <button className={styles.favorite_btn}>
