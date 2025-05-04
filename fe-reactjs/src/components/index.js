@@ -4,6 +4,7 @@ export { default as CartPreview } from "./CartPreview";
 export { default as Categories } from "./Categories";
 export { default as DropdownCard } from "./DropdownCard";
 export { default as Dropdown } from "./Dropdown";
+export { default as FavoritePreview } from "./FavoritePreview";
 export { default as FilterForm } from "./FilterForm";
 export { default as InputField } from "./InputField";
 export { default as Logo } from "./Logo";
