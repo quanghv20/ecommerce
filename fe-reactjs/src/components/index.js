@@ -1,5 +1,6 @@
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Card } from "./Card";
+export { default as CartPreview } from "./CartPreview";
 export { default as Categories } from "./Categories";
 export { default as DropdownCard } from "./DropdownCard";
 export { default as Dropdown } from "./Dropdown";

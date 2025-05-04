@@ -1,9 +1,9 @@
 /** React */
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 /** Components */
-import { Dropdown, Logo } from "components";
+import { CartPreview, Dropdown, Logo } from "components";
 
 /** Assets */
 import moreIcon from "assets/icons/more.svg";
@@ -22,6 +22,35 @@ import styles from "./styles.module.scss";
 export default function Header() {
   /** Component States */
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const [isOpenCartPreview, setIsOpenCartPreview] = useState(false);
+  const cartPreviewRef = useRef(null);
+
+  /** Logic Handlers */
+  const handleToggleCartPreview = () => {
+    setIsOpenCartPreview(!isOpenCartPreview);
+  };
+
+  /** Side Effects */
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        cartPreviewRef.current &&
+        !cartPreviewRef.current.contains(event.target)
+      ) {
+        setIsOpenCartPreview(false);
+      }
+    };
+
+    if (isOpenCartPreview) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpenCartPreview]);
 
   return (
     <div className={styles.header}>
@@ -93,7 +122,10 @@ export default function Header() {
               <span className={styles.actions__title}>03</span>
             </button>
             <div className={styles.actions__separate}></div>
-            <button className={styles.actions__btn}>
+            <button
+              className={styles.actions__btn}
+              onClick={handleToggleCartPreview}
+            >
               <img
                 src={buyIcon}
                 alt=""
@@ -101,6 +133,11 @@ export default function Header() {
               />
               <span className={styles.actions__title}>$65.42</span>
             </button>
+            <CartPreview
+              isOpen={isOpenCartPreview}
+              ref={cartPreviewRef}
+              onCancel={handleToggleCartPreview}
+            />
           </div>
 
           <div className={styles.actions__user}>
