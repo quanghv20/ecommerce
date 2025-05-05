@@ -1,11 +1,11 @@
 .auth {
   display: flex;
-  height: 100vh;
+  align-items: center;
+  background: var(--auth-intro-bg-color);
 
   &__intro,
   &__content {
     flex: 1;
-    height: 100%;
   }
 
   &__intro {
@@ -14,7 +14,6 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
-    background: var(--auth-intro-bg-color);
 
     &_text {
       font-size: 18px;
@@ -30,6 +29,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 50px 0px;
 
     &_inner {
       display: flex;

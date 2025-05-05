@@ -13,7 +13,7 @@ import { NotFoundPage, UnauthorizedPage, ForbiddenPage } from "pages/Errors";
 import { SignInPage, SignUpPage, ForgotPasswordPage } from "pages/Auth";
 
 /** Private Pages */
-import { ProfilePage, CartPage } from "pages/Privates";
+import { ProfilePage, CartPage, CheckoutPage } from "pages/Privates";
 
 const Router = () => {
   return (
@@ -36,6 +36,7 @@ const Router = () => {
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
       </Route>
 
